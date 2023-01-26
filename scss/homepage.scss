@@ -1,0 +1,61 @@
+#home-banner{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .landscape, .portrait{
+        z-index: $z-back;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        img{
+            width: 100vw;
+            min-height: 100vh;
+        }
+    }
+    .banner-content{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: white;
+        text-align: center;
+        img{
+            width: 30vw;
+            height: 30vw;
+            margin-bottom: 50px;
+            @include mQ ($lg){
+                width: 10vw;
+                height: 10vw;
+                margin-bottom: 10vh;
+            }
+        }
+        h1{
+            @include mQ ($xxl){
+                font-size: 4rem;
+            }
+        }
+        hr{
+            border-top: 3px solid white;
+            opacity: 1;
+        }
+    }
+}
+
+.headshot{
+    img{
+        width: 60vw;
+        height: auto;
+        @include mQ ($md){
+            width: 100%;
+        }
+    }
+}

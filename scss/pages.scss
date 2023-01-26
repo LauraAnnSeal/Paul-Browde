@@ -1,0 +1,41 @@
+.number{
+    font-family: $mont;
+    font-weight: $m-bold;
+    font-size: 2rem;
+    
+    width: 4rem;
+    height: 4rem;
+    border-radius: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#therapy-images{
+    img{
+        width: 100%;
+        height: auto;
+    }
+    @include mQ ($md){
+        .rounded{
+            height: 20vh;
+            background-color: lightgrey;
+            overflow: hidden;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img{
+            flex-shrink: 0;
+            object-fit: cover;
+            min-width: 100%;
+            min-height: 100%
+        }
+    }
+    @include mQ ($lg){
+        .rounded{
+            height: 30vh;
+        }
+    }
+}
